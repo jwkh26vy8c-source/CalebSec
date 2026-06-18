@@ -1,0 +1,15 @@
+title: Possible Failed Login
+id: CALBSEC-001
+status: experimental
+description: Detects failed password or failed login messages.
+level: medium
+logsource:
+  product: linux
+  service: auth
+detection:
+  selection:
+    message|contains:
+      - Failed password
+      - failed login
+      - 4625
+  condition: selection

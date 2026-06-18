@@ -1,0 +1,17 @@
+title: Admin Account Failed Login
+id: CALBSEC-002
+status: experimental
+description: Detects failed login attempts involving the admin account.
+level: high
+logsource:
+  category: authentication
+detection:
+  selection_message:
+    message|contains:
+      - Failed password
+      - failed login
+  selection_user:
+    user:
+      - admin
+      - root
+  condition: selection_message and selection_user
