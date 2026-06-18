@@ -252,9 +252,6 @@ This project demonstrates:
 
 Planned future enhancements include:
 
-- RBAC / authentication
-- Live log ingestion
-- Sigma rule support
 - Suricata integration
 - Zeek integration
 - SOAR automation
